@@ -1,1 +1,15 @@
-/target
+/# Ignore all Rust build artifacts
+**/target/
+**/*.lock
+**/*.rs.bk
+
+# Ignore editor metadata
+.vscode/
+*.code-workspace
+
+# Ignore Rust toolchain metadata
+**/.rustc_info.json
+**/Cargo.lock
+**/CACHEDIR.TAG
+**/*.json
+**/*.timestamptarget
