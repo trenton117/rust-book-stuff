@@ -1,5 +1,5 @@
 [package]
-name = "vscode_rust"
+name = "ch2-guessing-game"
 version = "0.1.0"
 edition = "2021"
 
