@@ -1,4 +1,4 @@
-/# Ignore all Rust build artifacts
+# Ignore all Rust build artifacts
 **/target/
 **/*.lock
 **/*.rs.bk
