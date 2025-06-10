@@ -1,5 +1,5 @@
 use std::cmp::Ordering; // std library, cmp method, Ordering type
-use std::io; // imports io(input/output) library from std library
+use std::io; // imports io(input/output) module from std library
 use rand::Rng; // we use the rand crate for the Rng trait for... rng
 
 fn main() {
@@ -13,7 +13,7 @@ fn main() {
 
     let mut guess = String::new(); // create mutable variable 'guess'. it's of type 'String', and it's 'new'.
 
-    io::stdin() // same as 'std::io::stdin', but 'use' on line 1 already called the io lib from the std library earlier, so we can just use 'io::stdin' now.
+    io::stdin() // same as 'std::io::stdin', but 'use' already called the io lib from the std library earlier, so we can just use 'io::stdin' now.
     
         .read_line(&mut guess) // calls the 'read_line' method from the 'stdin' fn. '(&mut guess)'
                                // means it's a mutable reference, rather than immutable
@@ -37,7 +37,8 @@ fn main() {
 
     println!("You guessed: {guess}");
     
-    match guess.cmp(&secret_number) { // .cmp method compares two values - in this case, guess and secret_number
+    match guess.cmp(&secret_number) {
+    // .cmp method compares two values - in this case, guess and secret_number
     // match expression tells program what to do based on outcome of the Ordering type returned from cmp method
         Ordering::Less => println!("Too small!"), 
         Ordering::Greater => println!("Too big!"),
